@@ -1,0 +1,59 @@
+@font-face {
+    font-display: swap;
+    font-family: 'GSC';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/gsc400.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'GSC';
+    font-style: normal;
+    font-weight: 600;
+    src: url('/fonts/gsc600.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'GSC';
+    font-style: normal;
+    font-weight: 800;
+    src: url('/fonts/gsc800.woff2') format('woff2');
+}
+
+body {
+    font-family: "GSC", monospace;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+p {
+    text-rendering: optimizeSpeed;
+}
+
+p,
+span,
+a,
+input,
+strong,
+b,
+em,
+i,
+textarea,
+button,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div {
+    font-family: inherit;
+    -webkit-tap-highlight-color: transparent;
+
+    &::selection {
+        color: var(--text);
+        background: rgba(30, 144, 255, 0.5);
+    }
+}

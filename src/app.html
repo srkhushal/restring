@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<script>
+		(function () {
+			try {
+				const savedTheme = localStorage.getItem('theme') || 'system';
+				let themeToApply = savedTheme;
+				if (savedTheme === 'system') {
+					themeToApply = window.matchMedia('(prefers-color-scheme: dark)').matches
+						? 'dark'
+						: 'light';
+				}
+				document.documentElement.setAttribute('data-theme', themeToApply);
+				const metaColor = themeToApply === 'dark' ? '#080808' : '#ffffff';
+				let metaTag = document.querySelector('meta[name="theme-color"]');
+				if (!metaTag) {
+					metaTag = document.createElement('meta');
+					metaTag.name = "theme-color";
+					document.head.appendChild(metaTag);
+				}
+				metaTag.setAttribute('content', metaColor);
+			} catch (e) { }
+		})();
+	</script>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	%sveltekit.head%
+</head>
+
+<body data-sveltekit-preload-data="hover">
+	<div style="display: contents">%sveltekit.body%</div>
+</body>
+
+</html>

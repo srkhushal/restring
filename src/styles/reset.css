@@ -1,0 +1,40 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: var(--text);
+    touch-action: manipulation;
+    line-height: 1.6;
+    min-height: 100dvh;
+    margin-inline: auto;
+    max-width: 1500px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--offset);
+    scroll-behavior: smooth;
+}
+
+@media (min-width:1500px) {
+    body {
+        border-inline: 1px solid;
+        border-color: var(--subtle-border);
+    }
+}
+
+main {
+    width: 100%;
+    margin-inline: auto;
+}
+
+:root {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}

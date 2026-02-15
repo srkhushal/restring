@@ -1,0 +1,60 @@
+:root {
+    color-scheme: light dark;
+    --base-size: 16px;
+    --z-index-dialog: 10;
+    --z-index-toast: 15;
+
+    --c-blue-l: blue;
+    --c-blue-d: dodgerblue;
+    --c-bg-l: 255, 255, 255;
+    /* --c-bg-d: 13, 17, 22; */
+    --c-bg-d: 2, 4, 9;
+
+    --accent: light-dark(var(--c-blue-l), var(--c-blue-d));
+    --accent-inv: light-dark(var(--c-blue-d), var(--c-blue-l));
+
+    --text: light-dark(black, gainsboro);
+    --background: light-dark(rgb(var(--c-bg-l)), rgb(var(--c-bg-d)));
+    --app-bg: light-dark(white, #000);
+    --subtle-border: light-dark(gainsboro, rgba(255, 255, 255, 0.125));
+    --subtle-background: light-dark(gainsboro, rgba(18, 18, 18, 1));
+}
+
+/* Size vars */
+:root {
+    --app-nav-height-standalone: 60px;
+    --app-nav-height: 60px;
+}
+
+:root[data-theme="light"] {
+    color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+    color-scheme: dark;
+}
+
+:root[data-theme="system"] {
+    color-scheme: light dark;
+}
+
+body {
+    background: var(--background);
+    color: var(--text);
+    transition: background 150ms;
+    font-size: var(--base-size);
+}
+
+a {
+    color: var(--accent);
+    padding: 2px;
+}
+
+input,
+textarea {
+    min-height: 2.5rem;
+}
+
+textarea {
+    min-height: calc(2.5rem + var(--base-size));
+}
