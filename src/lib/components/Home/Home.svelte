@@ -92,7 +92,7 @@
 	</div>
 {/snippet}
 
-<select name="operations">
+<!-- <select name="operations">
 	<optgroup label="Utilities">
 		<option value="extractEmails">Extract Emails</option>
 		<option value="extractURLs">Extract URLs</option>
@@ -117,7 +117,7 @@
 		<option value="countVowels">Count Vowels</option>
 		<option value="isPalindrome">Panidrome Check</option>
 	</optgroup>
-</select>
+</select> -->
 
 <style>
 	.string-manips {
